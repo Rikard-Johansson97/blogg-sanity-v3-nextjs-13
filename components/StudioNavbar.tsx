@@ -7,11 +7,12 @@ interface StudioNavbarProps {}
 const StudioNavbar: FC<StudioNavbarProps> = (props: any) => {
   return (
     <div>
-      <div className='flex item-center p-5'>
+      <div className='flex item-center p-5 justify-between'>
         <Link href='/' className='text-[#F7AB0A] flex items-center'>
           <ArrowUturnLeftIcon className='h-6 w-6 mr-2' />
           Go to Website
         </Link>
+        <div>SIDAN ÄR SKAPAD AV RIKARD</div>
       </div>
       <>{props.renderDefault(props)}</>
     </div>

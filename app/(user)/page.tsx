@@ -1,13 +1,10 @@
 import React, { FC } from "react";
+import Header from "../../components/Header";
 
 interface HomePageProps {}
 
 const HomePage: FC<HomePageProps> = () => {
-  return (
-    <div>
-      <h1 className='text-4xl'>HEJ</h1>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default HomePage;

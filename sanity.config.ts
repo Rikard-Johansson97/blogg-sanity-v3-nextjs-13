@@ -24,7 +24,7 @@ export default defineConfig({
   },
   studio: {
     components: {
-      // logo: Logo,
+      logo: Logo,
       navbar: StudioNavbar,
     },
   },
