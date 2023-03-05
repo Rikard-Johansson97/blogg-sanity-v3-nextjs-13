@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { previewData } from "next/headers";
 import { groq } from "next-sanity";
 import { client } from "../../lib/sanity.client";
-import { PreviewSuspense } from "../../components/PreviewSuspense";
+import PreviewSuspense from "../../components/PreviewSuspense";
 import PreviewBlogList from "../../components/PreviewBlogList";
 import BlogList from "../../components/BlogList";
 const query = groq`
@@ -13,7 +13,7 @@ const query = groq`
   } | order(_createdAt desc)
 `;
 
-const HomePage = async () => {
+export default async function HomePage() {
   if (previewData()) {
     return (
       <PreviewSuspense
@@ -31,6 +31,4 @@ const HomePage = async () => {
 
   const posts = await client.fetch(query);
   return <BlogList posts={posts} />;
-};
-
-export default HomePage;
+}
